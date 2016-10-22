@@ -8,7 +8,8 @@ p hash[:wat][2][:wut][1][0][9][:bbq]
 
 
 
-arr = [[0, 1, 2, 3, 4, {:secret => {:unblock => [0, "Nizar"]}}]]
+arr = [[[0], 1, 2, 3, 4, {:secret => {:unblock => [0, "Nizar"]}}]]
 
 
-p arr[0][5][:secret][:unblock][1]
+puts arr[0][3]
+#[:secret][:unblock][1]
