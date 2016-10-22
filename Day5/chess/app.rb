@@ -177,8 +177,8 @@ puts "--------------------"
 p black_pawn.can_move?(3, 7) == "yes"
 p black_pawn.can_move?(3, 8) == "yes"
 p white_pawn.can_move?(5, 2) == "yes"
-p white_pawn.can_move?(6, 6) == "yes"
-p white_pawn.can_move?(2, 4) == "yes"
+p white_pawn.can_move?(5, 3) == "yes"
+
 
 
 puts "Invalid Pawn Movements"

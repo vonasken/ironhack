@@ -10,7 +10,7 @@ class Pawn
 	
 	def can_move?(x_final, y_final)
 
-		if x_initial - x_final == 0 && (y_initial - y_final == 1 && y_initial - y_final == 2) 
+		if x_initial - x_final == 0 && y_initial - y_final <= 2
 			 "yes"
 		
 		else 
