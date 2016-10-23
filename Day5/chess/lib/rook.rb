@@ -10,11 +10,11 @@ class Rook
 	
 	def can_move?(x_final, y_final)
 		if x_initial - x_final == 0 && y_initial - y_final != 0
-			"yes"
+		   puts "yes"
 		elsif x_initial - x_final != 0 && y_initial - y_final == 0
-			"yes"
+			puts "yes"
 		else
-			"no"
+			puts "no"
 		end
 	end
 
