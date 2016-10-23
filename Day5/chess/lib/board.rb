@@ -10,6 +10,7 @@ class Board
 
 	@pieces[piece.x_initial][piece.y_initial] = piece
 	
+	
 	end
 
 
