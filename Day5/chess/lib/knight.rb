@@ -11,16 +11,16 @@ class Knight
 	def can_move?(x_final, y_final)
 
 		if x_initial - x_final == 0.abs && y_initial - y_final != 0.abs
-			 "no"
+			 puts "no"
 		elsif x_initial - x_final != 0.abs && y_initial - y_final == 0.abs
-			 "no"
+			puts "no"
 			 	
 		elsif x_initial - x_final <= 2.abs && y_initial - y_final <= 3.abs
-			 "yes"
+			puts  "yes"
 		elsif x_initial - x_final <= 3.abs && y_initial - y_final <= 2.abs
-			 "yes" 
+			puts "yes" 
 		else 
-			 "no"
+			puts  "no"
 		end
 	end
 
