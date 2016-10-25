@@ -1,5 +1,5 @@
 class Designer 
-	include CaffeineConsumer
+	include CaffeineConsumer3
 	include Payable
 
 	def design_things
