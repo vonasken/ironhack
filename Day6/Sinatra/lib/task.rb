@@ -6,20 +6,27 @@ class Task
         @id = @@current_id
         @@current_id += 1
         @complete = false
-        @created_at = created_at
+        @created_at = Time.now
     end
 
-    created_at = Time.now
-    def completed?
-     @complete  
+    
+    def complete?
+     if @complete == true
+      	true
+     else 
+     	false
+     end
 
     end
+
     def complete!
     	@complete = true
     end
+
     def make_incomplete
     	@complete = false	
     end
+
     def update_content!(string)
     	@content = string
     	@update_at = Time.now
