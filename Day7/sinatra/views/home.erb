@@ -1,0 +1,57 @@
+	<html>
+		<body>
+	<h1>
+	HOME BEAST </h1>
+	
+	<p>Hi, My name is Marc! 
+	I am funny sometimes. 
+	Most times...I'm not!</p>
+	
+	<ul>
+
+		<li>
+
+					<a href="/home"> Home </a></br>
+				</br>
+			</li>
+			<li>
+					<a href="/hours_ago"> hours_ago </a></br>
+				</br>
+			</li>
+			<li>
+					<a href="/hipage"> hipage </a></br>
+				</br>
+			</li>
+			<li>
+					<a href="/current_time"> current_time </a></br>
+				</br>
+			</li>
+			<li>
+					<a href="/user_profile"> user_profile </a></br>
+				</br>
+				
+			</li>
+			<li>
+					<a href="/best_pizza"> best_pizza </a></br>
+				</br>
+			</li>
+			<li>
+					<a href="/about"> about </a></br>
+		</li>
+
+	</ul>
+	<% if Date.today.tuesday? %>
+
+	<p>
+	Izzy Ironside is <strong>NOT</strong>
+	a fan of Tuesday like today.
+	</p>
+	<% end %>
+
+	<p>
+	Izzy Ironside was born on <%= Time.now %>
+	</p>
+
+
+	</body>
+	</html>

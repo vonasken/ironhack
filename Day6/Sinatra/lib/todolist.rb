@@ -19,5 +19,8 @@ class TodoList
 			@tasks.delete_if { |the_task| the_task.id == task_id }
 		end
 
-end
+		def find_task_by_id(task_id)
+
+			@task.find { |the_task| the_task.id == task_id}
+		end
 
