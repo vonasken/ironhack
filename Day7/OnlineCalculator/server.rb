@@ -2,22 +2,17 @@
 
 require "sinatra"
 require_relative("lib/calculator.rb")
+require_relative("lib/savior.rb")
 
 
 
 get "/" do
   erb(:add)
 end
-
-get "/calculation" do 
-	erb(:calculation)
-end
+get '/calculation' do
+  erb(:memory)
 
 
-# post "/calculation" do
- 
-#   "Params data: " + params.inspect
-# end
 
 post "/calculation" do
 	
@@ -41,10 +36,18 @@ post "/calculation" do
 
   	end
 
-   
+  
+
+   end
+post "calculation" do 
 
 end
+     memoire = Memory.new(result)
 
+         saved = memoire.saved_result
+end
+
+ 
 # post "/calculation" do
 
 #   first = params[:first_number].to_f
