@@ -2,6 +2,10 @@ require_relative("..lib/task.rb")
 require_relative("..lib/todolist.rb")
 
 
+enable (:sessions)
+
+todo_list = TodoList.new("Josh")
+todo_list.load_tasks
 
 
 
@@ -20,15 +24,14 @@ end
 post "/create_task" do
 
 	shit_to_do = task.new 
+	added = todo_list.add_task(task)
+	
 	todo_list.save
 
 	redirect to ("/tasks")
 
 end
 
-
-todo_list = TodoList.new("Josh")
-todo_list.load_tasks
 
 
 
