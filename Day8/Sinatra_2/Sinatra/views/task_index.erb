@@ -10,6 +10,26 @@
 
 <a href="http://localhost:4567/new_task">New Task</a>
 
+<p>
+  Your task list is:</br>
+  
+
+ <% @tasks.each do |task| %>
+<%= task.id %>.<strong><%= task.content %>
+</br>
+
+<button type="submit" name="complete">Complete!</button></br>
+
+<% end %></strong>
+</p>
+
+
+
+<form action="/deleted_task" method="POST">
+  <input type="text" name="deletes" placeholder="Delete a Task"> 
+   <input type="submit" value="Submit">
+  </form>
+</br>
 
 </form>
 </body>

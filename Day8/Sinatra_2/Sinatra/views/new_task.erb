@@ -2,20 +2,11 @@
 
 
 <form action="/create_task" method="POST">
-  <input type="text" name="Task" placeholder="Add a New Task"> 
+  <input type="text" name="task" placeholder="Add a New Task"> 
    <input type="submit" value="Submit">
   </form>
 </br>
-<p>
-  Your task list is:
-  <strong><%= @result %></strong>.
-</p>
 
 
-<form method="post" action="/saved_task">
-  <input type="hidden" name="result" value="<%= @result %>">
 
-  <button>
-    Save this task for later
-  </button>
-</form>
+
