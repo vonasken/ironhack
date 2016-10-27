@@ -1,13 +1,14 @@
-require_relative("..lib/task.rb")
-require_relative("..lib/todolist.rb")
+require "sinatra"
+require 'sinatra/reloader'
+require_relative("lib/task.rb")
+require_relative("lib/todolist.rb")
+require_relative("lib/savedtasks.rb")
 
 
-enable (:sessions)
+# todo_list = TodoList.new("Josh")
+# todo_list.load_tasks
 
-todo_list = TodoList.new("Josh")
-todo_list.load_tasks
-
-
+my_task = SavedTasks.new
 
 get "/tasks" do 
 
@@ -23,15 +24,25 @@ end
 
 post "/create_task" do
 
-	shit_to_do = task.new 
-	added = todo_list.add_task(task)
+	shit_to_do = Task.new(params[:Task]) 
+
+	TodoList.add_task
 	
-	todo_list.save
+ 	content = todo_list.save(added)
 
 	redirect to ("/tasks")
 
 end
 
+post "/Saved_tasks" do
+    # <input type="hidden" name="result" value="<%= @result %>">
+    #                               |
+    #                       ---------
+    #                       |
+  my_task.save(params[:result])
+
+  redirect to("/tasks")
+end
 
 
 

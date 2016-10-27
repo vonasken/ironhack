@@ -1,14 +1,9 @@
 
 class TodoList
     attr_reader :tasks
-	    def initialize
+	    def initialize(tasks)
 	        @tasks = []
 	    end
-
-
-		def initialize
-			
-		end
 
 		def add_task(content)
 
@@ -23,4 +18,4 @@ class TodoList
 
 			@task.find { |the_task| the_task.id == task_id}
 		end
-end3
+end
