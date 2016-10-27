@@ -19,10 +19,10 @@ end
 
 post "/create_task" do
 
-	task.new 
+	shit_to_do = task.new 
 	todo_list.save
 
-	redirect("/tasks")
+	redirect to ("/tasks")
 
 end
 
