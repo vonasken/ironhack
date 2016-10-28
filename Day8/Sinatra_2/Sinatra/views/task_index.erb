@@ -15,7 +15,9 @@
   
 
  <% @tasks.each do |task| %>
-<%= task.id %>.<strong><%= task.content %>
+<%= task.id %>.<strong><%= task.content %> <% if @complete %> 
+ Done!
+<%end%> 
 </br>
 
 <button type="submit" name="complete">Complete!</button></br>
