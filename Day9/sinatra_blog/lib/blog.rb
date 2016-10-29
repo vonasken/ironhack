@@ -5,12 +5,12 @@ class Blog
 		@posts = []
 	end
 
-	def add_post(content)
+	def add_post(posts)
 
-		posts.push(content)
+		@posts.push(posts)
 
 	end
 
-	
+
 
 end
