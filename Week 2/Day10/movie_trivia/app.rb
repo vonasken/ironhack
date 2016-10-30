@@ -15,8 +15,8 @@ get "/search_results" do
   	
   	@movies_with_posters = []
 
-  						.select do |x|
-
+  						@movies_with_posters.select do |x|
+  							x
   						end
 
 

@@ -1,5 +1,4 @@
 require "sinatra"
-require 'sinatra/reloader'
 require_relative("lib/task.rb")
 require_relative("lib/todolist.rb")
 require_relative("lib/savedtasks.rb")
