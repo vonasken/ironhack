@@ -5,7 +5,12 @@
 </head>
 <body>
 
-
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
 </br>
 </br><center>
 <font face="Comic Sans MS" size="7" color="blue"><h1>Movie Trivia!</h1></font>
@@ -21,6 +26,7 @@
 <head>
   <title>WELCOME TO THE RESULTS!</title>
 </head>
+
 <body>
 
 <font color="red"><h1>HERE ARE YOUR RESULTS!</h1></center></font>
@@ -53,24 +59,17 @@ h1 {
 
 
 </div> -->
-<!DOCTYPE html>
+
 <html>
 <head>
 	<title></title>
 </head>
 <body>
-			<h2> <%= @question %> </h2>
+			<!-- <h2> <%= @question %> </h2> -->
 			<h3>Showing <%= @movies.length %> results </h3>
-			<% @movies.each_with_index do |movie, index| %>
-				<% if @random_movie == movie %>
-					<img src='<%= movie.poster %>' onclick="alert('CORRECT')">
-				<% else %>
-			 		<img src='<%= movie.poster %>' onclick="alert('INCORRECT')">
-				<% end %>
-					<% if index >= 8 %>
-						<% break %>
-					<% end %>
-			<% end %>
+
+			<%= @new_array %>
+
 
 </body>
 </html>

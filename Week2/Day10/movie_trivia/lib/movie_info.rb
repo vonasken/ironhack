@@ -3,7 +3,11 @@ def Movie_list
 		@movies = []
 	end
 
-	def postersearch
+	# def postersearch(input)
 
-		end
+	# 	i = Imdb::Search.new(input)
+	# 	i.posters
+
+
+	# 	end
 end

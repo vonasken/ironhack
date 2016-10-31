@@ -16,7 +16,7 @@ get "/search_results" do
   	@movies_with_posters = []
 
   						@movies_with_posters.select do |x|
-  							x
+  							@new_array = x.push
   						end
 
 
@@ -26,3 +26,18 @@ get "/search_results" do
 
   erb :results
 end
+
+
+
+
+
+      # <% @movies.each_with_index do |movie, index| %>
+      #   <% if @random_movie == movie %>
+      #     <img src='<%= movie.poster %>' onclick="alert('CORRECT')">
+      #   <% else %>
+      #     <img src='<%= movie.poster %>' onclick="alert('INCORRECT')">
+      #   <% end %>
+      #     <% if index >= 8 %>
+      #       <% break %>
+      #     <% end %>
+      # <% end %>
