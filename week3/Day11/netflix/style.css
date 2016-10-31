@@ -1,10 +1,59 @@
-.image {
-    position: relative;
-}
 
 .netflix {
     position: absolute;
-    width:304px;
-    height:228px;
+    top: 0;
+    left:40;
+    
     
 }
+
+.h{
+	width:230px;
+    
+
+}
+
+.boxed {
+
+	position: absolute;
+    top: 35;
+    right: 50;
+	background-color: red ;
+	width: 150px;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 9px; 
+	color: white;
+	font-size: 20;
+
+  
+}
+
+div.texto{
+
+	text-align: center;
+	vertical-align: middle;
+	line-height: 9px;
+   color: white;
+   font-size: 50;
+    font-weight: bold;
+    opacity:1;
+}
+
+.transboxed {
+	position: absolute;
+    top: 150 ;
+    right: 350;
+    width: 650px;
+	height: 300px;
+  background-color: rgba(0, 0, 0, 0.5);
+  
+   /* For IE8 and earlier */
+
+}
+
+
+
+
+
