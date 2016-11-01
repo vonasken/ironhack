@@ -1,0 +1,28 @@
+body,
+html,
+
+.pizza-header{
+	height: 100%;
+}
+.pizza-header {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: pink;
+
+	background-image: url(https://media.giphy.com/media/TKofBknF40njG/giphy.gif);
+}
+
+
+@media screen and (min-width: 768px){
+
+	.pizza-header{
+		background-image: url(https://media.giphy.com/media/Z4IBDu6ZFTkFa/giphy.gif);
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.pizza-header{
+		background-image: url(https://media.giphy.com/media/kfGijLoNvBQ08/giphy.gif)
+	}
+}
