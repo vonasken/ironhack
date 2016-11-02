@@ -1,0 +1,17 @@
+.whitespace {
+
+	background-color: white ;
+	height: 50px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 9px; 
+	color: white;
+	font-size: 20;
+
+  
+}
+
+.landing{
+	width: 100px;
+	height: 100px;
+}
