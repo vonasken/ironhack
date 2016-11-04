@@ -1,0 +1,34 @@
+.navbar {
+	height: 30px;
+	width: 100px;
+	border: 2px lightgrey;
+}
+body, html {
+    height: 100%;
+}
+
+
+.parallax {
+    /* The image used */
+    background-image: url("banner.jpeg");
+
+    /* Set a specific height */
+    min-height: 300px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profilebar {
+	 list-style-type: none;
+    margin: 0;
+    padding: 50px;
+    overflow: hidden;
+    background-color: red;
+	height: 30px;
+	width: 100%;
+	border: 5px lightgrey;
+}
