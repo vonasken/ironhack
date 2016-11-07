@@ -7,9 +7,7 @@ class Vikings {
 
 	}
 
-	pit () { 
-
-	}
+	
 }
 
 module.exports = Vikings;
