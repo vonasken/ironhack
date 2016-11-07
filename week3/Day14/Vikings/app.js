@@ -17,3 +17,4 @@ var viking2 = new Vikings( "Yazork", 40, 10)
 var fighting = new Pit(viking1, viking2)
 
 fighting.fight();
+
