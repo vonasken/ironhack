@@ -27,11 +27,12 @@ class Pit {
 					console.log("or be beaten to an inch of his life. ")
 
 				};
+					setTimeout(after10Seconds, 10000);
 
-			function start () {
+			function after10Seconds () {
 
-				var viking1Health = this.viking1.health 
-				var viking2Health = this.viking2.health 
+				var viking1Health = this.viking1.health;
+				var viking2Health = this.viking2.health; 
 
 				var i = 0
 				while (viking1Health > 10 && viking2Health > 10){
