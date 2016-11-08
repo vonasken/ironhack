@@ -1,0 +1,18 @@
+
+
+
+<ul> 
+
+	<% @projects.each do |project| %>
+
+			<li><%= project.name %> 
+
+			<% if @projects = project.description %>
+				
+				- <%= project.description %></li>
+		
+			<%end%>
+
+	<%end%>
+
+</ul>
