@@ -1,0 +1,35 @@
+<h1> Here is your computer MAGIC!</h1>
+
+
+Your Text:
+</br>
+</br>
+
+<%= @text %></br>
+
+</br>
+</br>
+
+Word Cound:
+</br>
+</br>
+
+<%= @word_count %>
+
+</br>
+</br>
+
+Reading Time:</br>
+</br>
+</br>
+
+<% readingTime = @word_count/275 %>
+
+<% if readingTime < 1 %>
+<%= "Less than 1 minute"%>
+<% elsif readingTime > 1%>
+<%= "#{readingTime} minutes"%>
+			
+	
+
+<% end %>
