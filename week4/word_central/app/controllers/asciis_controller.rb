@@ -1,3 +1,5 @@
+require 'Artii/Base'
+
 class AsciisController < ApplicationController
 
 	def new
@@ -6,8 +8,9 @@ class AsciisController < ApplicationController
 
 
 	def create
+		a =  Artii::Base.new
     
-     @text = params[:text_inspection][:user_text]
+     @text = a.asciify(params[:ascii][:user_text])
 
 
      render "results"
