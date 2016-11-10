@@ -21,3 +21,15 @@
 
 en:
   hello: "Hello world"
+
+
+  en:
+  activerecord:
+    attributes:
+      hours: "Hours"
+
+      errors:
+      models:
+          attributes:
+            hours:
+              blank: "is required"

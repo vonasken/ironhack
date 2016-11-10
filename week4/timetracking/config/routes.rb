@@ -21,5 +21,11 @@ get "/projects/:id", to: "projects#show", as: :project
 
 post "/projects", to: "projects#create"
 
+get '/projects/:project_id/time_entries', to: 'time_entries#index', as: :project_time_entries 
+
+get '/projects/:project_id/time_entries/new', to: 'time_entries#new', as: :new_project_time_entries
+post '/projects/:project_id/time_entries/', to: 'time_entries#create'
+
+
 end
 
