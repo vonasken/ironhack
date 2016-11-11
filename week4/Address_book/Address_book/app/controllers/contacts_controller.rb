@@ -1,5 +1,7 @@
 class ContactsController < ApplicationController
 
+	
+
 	def new
 
 	
@@ -7,7 +9,7 @@ class ContactsController < ApplicationController
 
 	def create
 
-    	contact = Contact.new(
+    	contact = Contacts.new(
       	:name => params[:contact][:name],
       	:address => params[:contact][:address],
       	:phone => params[:contact][:phone],
@@ -15,7 +17,9 @@ class ContactsController < ApplicationController
 
       	contact.save
 
-		redirect_to("/")  
+		redirect_to("/") 
+
+		 render(:text => contact.attributes) 
     
     end
 

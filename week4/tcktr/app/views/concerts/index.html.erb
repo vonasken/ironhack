@@ -1,0 +1,22 @@
+<h1>Concert List</h1>
+
+<br>
+	<br>
+	<% @concerts.each do |concert| %>
+<br>
+	<br>
+	
+	<div class="concert">
+		<strong>Artist:&nbsp;</strong> <%= concert.artist %><br>
+		<strong>Where?&nbsp;</strong><%= concert.venue %>
+		<strong>When?&nbsp;</strong><%= concert.date %><br>
+		<strong><h5><%= concert.price %></h5></strong>
+			<strong>The Gists:</strong></br><%= concert.description %>
+		<%= link_to 'Show', concert_path(concert) %>
+		</div>	
+		<br>
+	<br>
+		<%end%>
+	
+
+

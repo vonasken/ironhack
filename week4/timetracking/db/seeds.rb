@@ -13,7 +13,7 @@ projectsD = Project.create!(name: "Mercedes", description: "SLS & S600 Maybach")
 projectsE = Project.create!(name: "Rolls Royce", description: "Drophead")
 projectsF = Project.create!(name: "McLaren", description: "570s")
 
-# The following ines are the same shit!
+# The following lines are the same shit!
 TimeEntry.create!(hours: 2, minutes: 30, date: Date.today, project_id: projectsA.id)
 TimeEntry.create!(hours: 2, minutes: 30, comments: "Nizar", date: Date.today, project_id: projectsA)
 
