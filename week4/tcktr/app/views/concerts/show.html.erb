@@ -1,21 +1,29 @@
 <p>
 <strong>Artist:</strong>
+<% if @concert.artist.present? %>
 <%= @concert.artist %>
+<% end %>
 </p>
 
 <p>
 <strong>Venue:</strong>
+<% if @concert.venue.present? %>
 <%= @concert.venue %>
+<% end %>
 </p>
 
 <p>
 <strong>Date:</strong>
+<% if @concert.date.present? %>
 <%= @concert.date %>
+<% end %>
 </p>
 
 <p>
 <strong>Price:</strong>
+<% if @concert.price.present? %>
 <%= @concert.price %>
+<% end %>
 </p>
 
 <p>
