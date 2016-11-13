@@ -1,0 +1,8 @@
+<!-- LOOP ATTEMPT THROUGH ALL CONCERT WITH TODAYS DATE !  -->
+
+<% @concerts.each do |real| %>
+	<% if real.date == Date.today %>
+	<strong><%= real.artist %></strong> at <strong><%= real.venue %></strong>
+
+	<% end %>
+<% end %>

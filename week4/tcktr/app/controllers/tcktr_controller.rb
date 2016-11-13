@@ -1,4 +1,10 @@
 class TcktrController < ApplicationController
   def index
-  end
+  	@concerts = Concert.all
+
+  end 
+
+	def show
+		@concert = Concert.find(params[:id])
+	end
 end
