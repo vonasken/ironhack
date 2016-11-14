@@ -15,11 +15,21 @@ class ConcertsController < ApplicationController
 		@concert = Concert.new(concert_params)
 
 		if @concert.save
-    redirect_to @concert
-  else
-    render 'new'
-  end
+    	redirect_to @concert
+  		else
+    	render 'new'
+  		end
 	end
+	def update 
+		@concert = Conert.find(params[:id])
+
+		if @concert.update(article_params)
+			redirect_to @concert
+		else
+			render 'edit'
+		end
+	end
+	
 
 	private
 	def concert_params

@@ -1,3 +1,5 @@
+
+
 class TcktrController < ApplicationController
   def index
   	@concerts = Concert.all

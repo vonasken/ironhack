@@ -30,6 +30,8 @@
 <strong>Description:</strong>
 <%= @concert.description %>
 </p>
+		<%= link_to 'Back', concert_path(concert) %>
+
 
 <h2>Add a comment:</h2>
 <%= form_for([@concert, @concert.comments.build]) do |f| %>
