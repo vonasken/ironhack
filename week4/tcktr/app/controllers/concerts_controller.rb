@@ -1,3 +1,4 @@
+
 class ConcertsController < ApplicationController
 	def index
 		@concerts = Concert.all
@@ -21,7 +22,7 @@ class ConcertsController < ApplicationController
   		end
 	end
 	def update 
-		@concert = Conert.find(params[:id])
+		@concert = Concert.find(params[:id])
 
 		if @concert.update(article_params)
 			redirect_to @concert
@@ -29,7 +30,7 @@ class ConcertsController < ApplicationController
 			render 'edit'
 		end
 	end
-	
+
 
 	private
 	def concert_params
