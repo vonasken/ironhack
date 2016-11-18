@@ -47,9 +47,10 @@ types.forEach(function(dif) {
   $(".js-pkmn-desc").empty()
   function that (desc){
     var descrip = apiResult.descriptions
+    descrip.forEach(function(desc) {
 
+    })
  
-  $(".js-pkmn-desc").append(`http://pokeapi.co/${desc.resource_uri.last} `)
   };
 
 
