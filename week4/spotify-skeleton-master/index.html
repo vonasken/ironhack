@@ -2,16 +2,25 @@
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="Stylesheet" href="css/bootstrap.css">
+
+	<script src="js/jquery-3.1.1.js"></script>
+
+	<script src="js/app.js"></script>
 </head>
+
+<form>
+	<input type="text" class="js-search-term" value="Song">
+	<input class="js-search-form" type="submit" value="Submit">
+</form>
+
 <body>
+
 
 	<div class="widget">
 
-			<form>
-				<input type="text" value="Artist Name">
-				<input type="submit" value="Submit">
-			</form>
+
 		<div class="header">
 		<!-- Try adding/removing these classes: -->
 
@@ -19,9 +28,12 @@
 		<!-- disabled -->
 
 
+
+
+
 		<!-- playing -->
 
-		<div class="btn-play disabled:hover"></div>
+		<div class="btn-play "></div>
 
 		<div class="metadata">
 		  <p class="title">Hunger of The Pine</p>
@@ -39,6 +51,7 @@
 
 		<audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
 	</div>
+
 
 </body>
 </html>
