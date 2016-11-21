@@ -9,13 +9,18 @@
 
 	<script src="js/app.js"></script>
 </head>
-
-<form>
-	<input type="text" class="js-search-term" value="Song">
-	<input class="js-search-form" type="submit" value="Submit">
-</form>
-
 <body>
+		<h2> Songify </h2> 
+	<br>
+<form class="js-form">
+			<label for="js-song-search">Search song:</label>
+				<br>
+			<input type="text" class="js-song-search">
+				<br>
+			<button class="btn btn-md js-search-submit">Search</button>
+		</form>
+
+
 
 
 	<div class="widget">
@@ -33,7 +38,7 @@
 
 		<!-- playing -->
 
-		<div class="btn-play "></div>
+		<div class="btn-play disabled "></div>
 
 		<div class="metadata">
 		  <p class="title">Hunger of The Pine</p>
@@ -46,10 +51,10 @@
 		</div>
 
 		<div class="cover">
-		<img src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
+		<img class="js-album-image" src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
 		</div>
 
-		<audio src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
+		<audio class="js-audio-player" src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
 	</div>
 
 

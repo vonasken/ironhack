@@ -1,49 +1,74 @@
 console.log("APP JS READY");
 
-
 $(document).ready(function () {
-  $(".js-search-term").on("submit", artistSearch);
-  // $('.js-modal').modal("show");
-
- // $(".btn-play").on("submit", playSong);
-
+	$('.js-form').on('submit', trackInput);
+	$('.js-audio-player').on('timeupdate', printTime);
 });
-//
-// var playSong =
-//   $.ajax({
-//     url:  ,
-//     type: 'GET',
-//     success: playIt
-//   });
 
-// ======================================================================
-// ========= SEARCH SONGS ! =============================================
-// ======================================================================
-function artistSearch () {
- var searchQuery = $(".js-search-term").val();
-     $(".js-search-results").empty();
-$.ajax({
-      type: 'GET',
-      url: "GET https://api.spotify.com/v1/albums/" + searchQuery + "/tracks" + ,
+function trackInput (theInput) {
 
-      success: showResults,
-      error: handleError,
-  });
+	theInput.preventDefault();
+	console.log(theInput);
+	$('.js-song-search').empty();
+
+	// take track search input, split on spaces and replace with +'s
+	var searchInput = $('.js-song-search').val();
+	var finalSearch = searchInput.split(" ").join("+");
+
+	// query API with track input
+	$.ajax({
+		type: "GET",
+		url: `https://api.spotify.com/v1/search?type=track&query=${finalSearch}`,
+		success: trackSearch,
+		error: errorHandler
+	})
 }
 
-  function showResults(response) {
-      console.log(response);
-      var searchResults = response.artists.items;
-      searchResults.forEach(function(artist){
+function trackSearch (theTrack) {
+	// console.log(theTrack);
+	// console.log("attempting to search...")
 
-          var oneResult = `<p>${artist.name}</p>
-           <img class="cover" src = "${imageUrl}">
-       </div>`;
-   $(".js-search-results").append(oneResult);
-        });
+	var trackId = theTrack.tracks.items[0].id;
+	var trackName = theTrack.tracks.items[0].name;
+	var trackArtist = theTrack.tracks.items[0].artists[0].name;
+	var trackAlbumUrl = theTrack.tracks.items[0].album.images[0].url;
+	var trackPlayUrl = theTrack.tracks.items[0].preview_url;
+
+	// console.log(trackArtist);
+	// console.log(trackName);
+	// console.log(trackAlbumUrl);
+	// console.log(trackId);
+
+	$('.js-title').html(trackName);
+	$('.js-author').html(trackArtist);
+	$('.js-album-image').attr("src", trackAlbumUrl);
+	$('.js-audio-player').attr("src", trackPlayUrl);
+
+	$('.btn-play').on('click', playSong);
 }
 
-function handleError(error) {
-  console.log("Error!");
-  console.log(error.responseText);
+function playSong () {
+	// toggle disabled and playing to show pause bars on click
+	$('.btn-play').toggleClass('disabled');
+	$('.btn-play').toggleClass('playing');
+
+	if ($('.btn-play').hasClass('playing')) {
+		// actually play the song
+		$('.js-audio-player').trigger('play');
+	} else {
+	// if playing already, then pause
+	$('.js-audio-player').trigger('pause');
+	}
+}
+
+function errorHandler (theError) {
+	console.log("failure.")
+}
+
+// Define a function to print the player's current time
+function printTime () {
+  var current = $('.js-audio-player').prop('currentTime');
+  console.debug('Current time: ' + current);
+  // replaces static progress value with actual time passed
+  $('.progress').attr("value", current);
 }
