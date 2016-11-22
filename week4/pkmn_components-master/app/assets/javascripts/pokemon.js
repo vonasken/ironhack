@@ -6,12 +6,7 @@ $(document).on("ready", function (){
     }
     render () {
       console.log(`Rendering pokemon with URL: ${this.apiUrl}`);
-      $.ajax ({
-        type: "GET",
-        url: `/${this.apiUrl}`,
-        success: PokemonApp.showPokemonModal,
-        error: PokemonApp.handleError
-      });
+       
     }
   };
 
@@ -50,7 +45,7 @@ types.forEach(function(dif) {
     descrip.forEach(function(desc) {
 
     })
- 
+
   };
 
 
