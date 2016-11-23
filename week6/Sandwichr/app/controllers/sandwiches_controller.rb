@@ -39,11 +39,12 @@ class SandwichesController < ApplicationController
 		ingredient = Ingredient.find_by(id: ingredient_id)
 
     sandwich.total_calories = sandwiches.total_calories = ingredient.calories
-
+# sandwich.update_calories
 
 		sandwich.ingredients.push(ingredient)
+
     sandwich.save
-    
+
 		render json: sandwich.to_json({:include => :ingredients})
 
 
