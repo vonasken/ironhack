@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
     user_maybe = User.find_by(email: params[:email])
 
     if user_maybe == nil || user_maybe.authenticate(params[:password]) == false
+      flash[:login_success] = "You have logged in successfully"
       redirect_to "/login"
     else
 
