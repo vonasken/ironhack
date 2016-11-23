@@ -38,8 +38,15 @@ class SandwichesController < ApplicationController
 		sandwich = Sandwich.find_by(id: sandwich_id)
 		ingredient = Ingredient.find_by(id: ingredient_id)
 
+    sandwich.total_calories = sandwiches.total_calories = ingredient.calories
+
+
 		sandwich.ingredients.push(ingredient)
+    sandwich.save
+    
 		render json: sandwich.to_json({:include => :ingredients})
+
+
 	end
 
 
